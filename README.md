@@ -1,2 +1,2 @@
 # ito
-WebSocket protocol defination between Hari Agent and Musubi Backend
+WebSocket protocol definition between Shutter Agent and Loom Backend
