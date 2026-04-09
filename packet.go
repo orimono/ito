@@ -1,6 +1,7 @@
 package ito
 
 type Capability struct {
+	Kind      string            `json:"kind"`
 	Version   string            `json:"version"`
 	Params    map[string]string `json:"params"`
 	Platforms []string          `json:"platforms"`
