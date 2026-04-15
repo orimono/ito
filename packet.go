@@ -37,6 +37,13 @@ const (
 	KindExecutorRegistered MessageKind = "executor.registered"
 )
 
+// ExecutorRegisteredResult is the response payload for KindExecutorRegistered.
+type ExecutorRegisteredResult struct {
+	CorrelationID string `json:"correlation_id,omitempty"`
+	Success       bool   `json:"success"`
+	Error         string `json:"error,omitempty"`
+}
+
 type Envelope struct {
 	Kind    MessageKind     `json:"kind"`
 	Payload json.RawMessage `json:"payload"`
@@ -84,6 +91,7 @@ type ExecutorRegistration struct {
 	Risk              RiskLevel `json:"risk"`
 	RequiresElevation bool      `json:"requires_elevation"`
 	Warning           string    `json:"warning,omitempty"`
+	CorrelationID     string    `json:"correlation_id,omitempty"`
 }
 
 // ── Join ──────────────────────────────────────────────────────────────────────
